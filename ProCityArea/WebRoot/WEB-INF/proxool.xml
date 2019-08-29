@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<something-else-entirely>
+
+  <proxool>
+  
+    <alias>mysql</alias> <!-- ds:DataSource -->
+    
+    <!-- 数据库连接信息 -->
+    <driver-url>jdbc:mysql://localhost/address</driver-url>
+    
+    <driver-class>com.mysql.jdbc.Driver</driver-class>
+    
+    <driver-properties>
+      <property name="user" value="root"/>
+      <property name="password" value="123456"/>
+    </driver-properties>
+    
+
+    <!-- 最大连接数 -->
+    <maximum-connection-count>100</maximum-connection-count> 
+    
+    <!-- 最小连接数 -->
+    <minimum-connection-count>10</minimum-connection-count>    
+
+    <!-- 最小增量 -->
+    <simultaneous-build-throttle>10</simultaneous-build-throttle>    
+     
+    <!-- 定期巡检时间（毫秒） --> 
+    <house-keeping-sleep-time>90000</house-keeping-sleep-time>  
+
+    <prototype-count>5</prototype-count>    
+
+    <!-- 使用前检测 -->
+    <test-before-use>true</test-before-use>  
+
+    <!-- 检测语句 -->
+    <house-keeping-test-sql>select CURRENT_DATE</house-keeping-test-sql>  
+
+  </proxool>
+  
+</something-else-entirely>
